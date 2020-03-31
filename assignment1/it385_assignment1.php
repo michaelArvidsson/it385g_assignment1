@@ -1,6 +1,6 @@
 <html>
 <body>
-<table border='1'>   
+<table border='1'> 
     <pre>
 <?php
 $trucks = array(
@@ -69,19 +69,20 @@ $trucks = array(
     )
 );
 
-echo "<tr><th>Manufacturer</th><th>Brand</th><th>Country</th>";
-foreach ($Trucks as $Truck) {
+echo "<tr><th>Manufacturer</th><th>Brand</th><th>Country</th><th>Other</th>";
+foreach ($trucks as $Truck) {
     echo "<tr>";
     echo "<td>".$Truck[0]."</td>";
     echo "<td>".$Truck[1]."</td>";
-    echo "<td>".$Truck[1]."</td>";
+    echo "<td>".$Truck[2]."</td>";
     echo "<td>";
     echo "<table>";
-    echo "<tr><th>Name</th><th>Population</th></tr>";
-    foreach($country[2] as $city){
+    echo "<tr><th>Model</th><th>drive shafts</th><th>Horsepowers</th></tr>";
+    foreach ($Truck[3] as $brand){
         echo "<tr>";
-        echo "<td>".$city[0]."</td>";  
-        echo "<td>".$city[1]."</td>";
+        echo "<td>".$brand[0]."</td>";  
+        echo "<td>".$brand[1]."</td>";
+        echo "<td>".$brand[2]."</td>";
         echo "</tr>";
     }
     echo "</table>";
