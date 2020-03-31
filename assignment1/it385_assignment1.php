@@ -1,6 +1,18 @@
 <html>
+    <style>
+        #head {
+            Background-color:black;
+            color:white;
+            font-size:120%;
+        }
+        #misc {
+            text-align:center; 
+            padding:5px;
+        }
+    </style>
 <body>
-<table border='1'> 
+<table border='1'>
+
     <pre>
 <?php
 $trucks = array(
@@ -69,20 +81,25 @@ $trucks = array(
     )
 );
 
-echo "<tr><th>Manufacturer</th><th>Brand</th><th>Country</th><th>Other</th>";
-foreach ($trucks as $Truck) {
+echo "<tr id='head'><th>Manufacturer</th><th>Brand</th><th>Country</th><th>Misc</th>";
+foreach ($trucks as $truck) {
+    if($struck[2]='Belarus'){
+        echo "<tr style='background:black;'>";
+    }else{
+        echo "<tr style='background:#fed;'>";        
+    }
     echo "<tr>";
-    echo "<td>".$Truck[0]."</td>";
-    echo "<td>".$Truck[1]."</td>";
-    echo "<td>".$Truck[2]."</td>";
+    echo "<td style='font-weight:bold;'>".$truck[0]."</td>";
+    echo "<td style='font-weight:bold;'>".$truck[1]."</td>";
+    echo "<td style='font-weight:bold;'>".$truck[2]."</td>";
     echo "<td>";
     echo "<table>";
-    echo "<tr><th>Model</th><th>drive shafts</th><th>Horsepowers</th></tr>";
-    foreach ($Truck[3] as $brand){
+    echo "<tr style='text-decoration: underline;'><th>Model</th><th>drive shafts</th><th>Horsepowers</th></tr>";
+    foreach ($truck[3] as $brand){
         echo "<tr>";
-        echo "<td>".$brand[0]."</td>";  
-        echo "<td>".$brand[1]."</td>";
-        echo "<td>".$brand[2]."</td>";
+        echo "<td id='misc'>".$brand[0]."</td>";  
+        echo "<td id='misc'>".$brand[1]."</td>";
+        echo "<td id='misc'>".$brand[2]."</td>";
         echo "</tr>";
     }
     echo "</table>";
