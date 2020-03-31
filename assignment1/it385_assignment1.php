@@ -1,24 +1,30 @@
 <html>
-    <style>
-        #head {
-            Background-color:black;
-            color:white;
-            padding:15px;
-            font-size:120%;
-        }
-        #sub {
-            font-weight:bold;
-            text-align:center;
-        }
-        #misc {
-            text-align:center; 
-            padding:5px;
-        }
-    </style>
-<body>
-<table border='1'>
+<style>
+    body {
+        font-family: sans-serif;
+    }
 
-    <pre>
+    #head {
+        Background-color: black;
+        color: white;
+        padding: 15px;
+        font-size: 120%;
+    }
+
+    #sub {
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #misc {
+        text-align: center;
+        font-size: 12px;
+        padding: 5px;
+    }
+</style>
+<body>
+    <table border='1'>
+<pre>
 <?php
 $trucks = array(
     array(
@@ -88,23 +94,23 @@ $trucks = array(
 
 echo "<tr><th id='head'>Manufacturer</th><th id='head'>Brand</th><th id='head'>Country</th><th id='head'>Misc</th>";
 foreach ($trucks as $truck) {
-    if($truck[2]==="Belarus"){
+    if ($truck[2] === "Belarus") {
         echo "<tr style='background:#ffff87;'>";
-    }else{
-        echo "<tr style='background:#87c5ff;'>";        
+    } else {
+        echo "<tr style='background:#87c5ff;'>";
     }
-    
-    echo "<td id='sub'>".$truck[0]."</td>";
-    echo "<td id='sub'>".$truck[1]."</td>";
-    echo "<td id='sub'>".$truck[2]."</td>";
+
+    echo "<td id='sub'>" . $truck[0] . "</td>";
+    echo "<td id='sub'>" . $truck[1] . "</td>";
+    echo "<td id='sub'>" . $truck[2] . "</td>";
     echo "<td>";
     echo "<table>";
     echo "<tr style='text-decoration: underline;'><th>Model</th><th>drive shafts</th><th>Horsepowers</th></tr>";
-    foreach ($truck[3] as $brand){
+    foreach ($truck[3] as $brand) {
         echo "<tr>";
-        echo "<td id='misc'>".$brand[0]."</td>";  
-        echo "<td id='misc'>".$brand[1]."</td>";
-        echo "<td id='misc'>".$brand[2]."</td>";
+        echo "<td id='misc'>" . $brand[0] . "</td>";
+        echo "<td id='misc'>" . $brand[1] . "</td>";
+        echo "<td id='misc'>" . $brand[2] . "</td>";
         echo "</tr>";
     }
     echo "</table>";
@@ -114,5 +120,4 @@ foreach ($trucks as $truck) {
 ?>
 </pre>
 </body>
-
 </html>
