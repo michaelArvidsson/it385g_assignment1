@@ -17,6 +17,7 @@
     }
 
     #misc {
+        width:100px;
         text-align: center;
         font-size: 12px;
         padding: 5px;
