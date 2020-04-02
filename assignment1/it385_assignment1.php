@@ -7,12 +7,13 @@
     body {
         font-family: sans-serif;
     }
-
     #caption {
         background-color: black;
         color:white;
         font-size: 200%;
-        font-weight: bold;
+        font-weight: 700;
+        letter-spacing: 10px;
+        text-transform: uppercase;
         padding:10px;
     }
     #head {
@@ -21,13 +22,11 @@
         padding: 15px;
         font-size: 120%;
     }
-
     #sub {
         font-weight: bold;
         text-align: center;
         padding: 15px;
     }
-
     #misc {
         width:100px;
         text-align: center;
