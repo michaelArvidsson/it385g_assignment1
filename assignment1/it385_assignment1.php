@@ -1,9 +1,20 @@
-<html>
+
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Big trucks</title>
 <style>
     body {
         font-family: sans-serif;
     }
 
+    #caption {
+        background-color: black;
+        color:white;
+        font-size: 200%;
+        font-weight: bold;
+        padding:10px;
+    }
     #head {
         Background-color: black;
         color: white;
@@ -14,6 +25,7 @@
     #sub {
         font-weight: bold;
         text-align: center;
+        padding: 15px;
     }
 
     #misc {
@@ -23,8 +35,9 @@
         padding: 5px;
     }
 </style>
+
 <body>
-    <table border='1'>
+<table border='1px'>
 <pre>
 <?php
 $trucks = array(
@@ -92,10 +105,10 @@ $trucks = array(
         )
     )
 );
-
+echo "<caption id='caption'>Big trucks</caption>";
 echo "<tr><th id='head'>Manufacturer</th><th id='head'>Brand</th><th id='head'>Country</th><th id='head'>Misc</th>";
 foreach ($trucks as $truck) {
-    if ($truck[2] === "Belarus") {
+    if ($truck[2] == "Belarus") {
         echo "<tr style='background:#ffff87;'>";
     } else {
         echo "<tr style='background:#87c5ff;'>";
@@ -119,6 +132,7 @@ foreach ($trucks as $truck) {
     echo "</tr>";
 }
 ?>
+</table>  
 </pre>
 </body>
 </html>
